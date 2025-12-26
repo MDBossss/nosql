@@ -1,5 +1,5 @@
 import { MongoClient } from "mongodb";
-import { CONTINUOUS_VARS } from "./main.js";
+import { CONTINUOUS_COLUMNS } from "./main.js";
 
 const mongoUrl = "mongodb://localhost:27017";
 const dbName = "studentdb";
@@ -28,7 +28,9 @@ async function z3() {
 
   // kategoricke varijable su sve osim kontinuiranih
   const allVars = Object.keys(sample);
-  const categoricalVars = allVars.filter((v) => !CONTINUOUS_VARS.includes(v));
+  const categoricalVars = allVars.filter(
+    (v) => !CONTINUOUS_COLUMNS.includes(v)
+  );
 
   await freqCol.deleteMany({});
 

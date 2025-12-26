@@ -1,5 +1,5 @@
 import { MongoClient } from "mongodb";
-import { CONTINUOUS_VARS } from "./main.js";
+import { CONTINUOUS_COLUMNS } from "./main.js";
 
 const mongoUrl = "mongodb://localhost:27017";
 const dbName = "studentdb";
@@ -18,13 +18,12 @@ async function z2() {
   const collection = db.collection(collectionName);
   const statsCol = db.collection(statsCollection);
 
-  // Dohvati sve dokumente iz kolekcije students
-  const docs = await collection.find({}).toArray();
+  const docs = await collection.find({}).toArray(); // svi dokumenti (redci)
   const stats = {};
 
-  // Za svaku kontinuiranu varijablu izračunaj statistiku
-  for (const varName of CONTINUOUS_VARS) {
-    // Izvuci sve vrijednosti za varijablu, pretvori u broj, filtriraj -1 i NaN
+  // svaku kontinuiranu varijablu izračunaj statistiku
+  for (const varName of CONTINUOUS_COLUMNS) {
+    // filtrirati sve vrijednosti za varijablu, pretvori u broj, filtriraj -1 i NaN
     const values = docs
       .map((doc) => Number(doc[varName]))
       .filter((v) => !isNaN(v) && v !== -1);
@@ -40,7 +39,6 @@ async function z2() {
     stats[varName] = { mean, std, count: values.length };
   }
 
-  // Očisti kolekciju statistika i upiši novi dokument
   await statsCol.deleteMany({});
   await statsCol.insertOne(stats);
   console.log("Statistika spremljena u kolekciju " + statsCollection);

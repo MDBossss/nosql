@@ -1,8 +1,9 @@
+import loadData from "./loadData.js";
 import z1 from "./z1.js";
 import z2 from "./z2.js";
 import z3 from "./z3.js";
 
-export const CONTINUOUS_VARS = [
+export const CONTINUOUS_COLUMNS = [
   "age",
   "Medu",
   "Fedu",
@@ -23,14 +24,19 @@ export const CONTINUOUS_VARS = [
 
 async function main() {
   const arg = process.argv[2];
-  if (arg === "-z1") {
+  if (arg === "-load") {
+    await loadData(); // node prvi/main.js -load
+  } else if (arg === "-z1") {
     await z1(); // node prvi/main.js -z1
   } else if (arg === "-z2") {
     await z2(); // node prvi/main.js -z2
   } else if (arg === "-z3") {
     await z3(); // node prvi/main.js -z3
   } else {
-    console.log("Koristi: node main.js -z1 | -z2");
+    console.log("  -load - učitaj CSV u MongoDB");
+    console.log("  -z1   - zamijeni nedostajuće vrijednosti");
+    console.log("  -z2   - izračunaj statistiku");
+    console.log("  -z3   - izračunaj frekvencije");
   }
 }
 
