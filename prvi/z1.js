@@ -1,5 +1,5 @@
 import { MongoClient } from "mongodb";
-import { CONTINUOUS_COLUMNS } from "./main.js";
+import { CONTINUOUS_COLUMNS, CATEGORICAL_COLUMNS } from "./main.js";
 
 const mongoUrl = "mongodb://localhost:27017";
 const dbName = "studentdb";
@@ -12,50 +12,24 @@ async function z1() {
   const db = client.db(dbName);
   const collection = db.collection(collectionName);
 
-  // dohvat jednog dokumenta (reda) za dobivanje svih varijabli
-  const sample = await collection.findOne({});
-  if (!sample) {
-    console.log("Nema podataka u kolekciji! Prvo pokreni: node main.js load");
-    await client.close();
-    return;
-  }
+  // Pripremi update operacije sa $ifNull operatorom
+  let updateOps = {};
 
-  const allColumns = Object.keys(sample);
-  const columnsCategorical = allColumns.filter(
-    (c) => !CONTINUOUS_COLUMNS.includes(c) && c !== "_id"
-  );
+  // kontinuirane varijable zamijeni s -1
+  CONTINUOUS_COLUMNS.forEach((field) => {
+    updateOps[field] = { $ifNull: [`$${field}`, -1] };
+  });
 
-  const docs = await collection.find({}).toArray(); // svi dokumenti (redci)
-  let missingCount = 0;
+  // kategoricke varijable zamijeni s "empty"
+  CATEGORICAL_COLUMNS.forEach((field) => {
+    updateOps[field] = { $ifNull: [`$${field}`, "empty"] };
+  });
 
-  // za svaki dokument (redak)
-  for (const doc of docs) {
-    let updateObj = {};
-
-    // kontinuirane varijable zamijeni s -1
-    for (const c of CONTINUOUS_COLUMNS) {
-      if (doc[c] === null || doc[c] === "" || !doc.hasOwnProperty(c)) {
-        updateObj[c] = -1;
-        missingCount++;
-      }
-    }
-
-    // kategoricke varijable zamijeni s "empty"
-    for (const c of columnsCategorical) {
-      if (doc[c] === null || doc[c] === "" || !doc.hasOwnProperty(c)) {
-        updateObj[c] = "empty";
-        missingCount++;
-      }
-    }
-
-    // okini update
-    if (Object.keys(updateObj).length > 0) {
-      await collection.updateOne({ _id: doc._id }, { $set: updateObj });
-    }
-  }
+  // updateMany
+  const result = await collection.updateMany({}, [{ $set: updateOps }]);
 
   console.log("Nedostajuće vrijednosti su uspješno zamijenjene!");
-  console.log(`Broj zamijenjenih vrijednosti: ${missingCount}`);
+  console.log(`Broj ažuriranih dokumenata: ${result.modifiedCount}`);
 
   await client.close();
 }

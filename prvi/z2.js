@@ -10,6 +10,8 @@ const statsCollection = "statistika_student-mat-G1-leq-10";
  * 2.	Za svaku kontinuiranu vrijednost izračunati srednju vrijednost,
  * standardnu devijaciju i kreirati novi dokument oblika sa vrijednostima,
  * dokument nazvati:  statistika_ {ime vašeg data seta}. U izračun se uzimaju samo nomissing  vrijednosti .
+ *
+ * Koristi MongoDB agregacijsku pipeline sa $group, $avg, $stdDevPop, i $sum operatorima
  */
 async function z2() {
   const client = new MongoClient(mongoUrl);
@@ -18,30 +20,42 @@ async function z2() {
   const collection = db.collection(collectionName);
   const statsCol = db.collection(statsCollection);
 
-  const docs = await collection.find({}).toArray(); // svi dokumenti (redci)
-  const stats = {};
+  await statsCol.deleteMany({});
 
-  // svaku kontinuiranu varijablu izračunaj statistiku
-  for (const varName of CONTINUOUS_COLUMNS) {
-    // filtrirati sve vrijednosti za varijablu, pretvori u broj, filtriraj -1 i NaN
-    const values = docs
-      .map((doc) => Number(doc[varName]))
-      .filter((v) => !isNaN(v) && v !== -1);
+  // svaku kontinuiranu varijablu izračunaj statistiku korištenjem agregacije
+  for (const field of CONTINUOUS_COLUMNS) {
+    const result = await collection
+      .aggregate([
+        {
+          $match: {
+            [field]: { $ne: "-1", $ne: null, $ne: "" }, // filtriraj -1, null i prazne stringove
+          },
+        },
+        {
+          $group: {
+            _id: null,
+            mean: { $avg: { $toDouble: `$${field}` } }, // pretvori u double
+            stddev: { $stdDevPop: { $toDouble: `$${field}` } }, // populacijska standardna devijacija
+            count: { $sum: 1 },
+          },
+        },
+      ])
+      .toArray();
 
-    if (values.length === 0) continue; // Preskoči ako nema vrijednosti
-
-    const mean = values.reduce((a, b) => a + b, 0) / values.length; // srednja vrijednost
-
-    const std = Math.sqrt(
-      values.reduce((a, b) => a + Math.pow(b - mean, 2), 0) / values.length // standardna devijacija
-    );
-
-    stats[varName] = { mean, std, count: values.length };
+    if (result.length > 0) {
+      await statsCol.insertOne({
+        Variable: field,
+        statistics: result[0],
+      });
+    }
   }
 
-  await statsCol.deleteMany({});
-  await statsCol.insertOne(stats);
-  console.log("Statistika spremljena u kolekciju " + statsCollection);
+  console.log(
+    "Statistika je izračunata i spremljena u kolekciju " +
+      statsCollection +
+      "broj dokumenata: " +
+      (await statsCol.countDocuments())
+  );
   await client.close();
 }
 
