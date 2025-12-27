@@ -56,13 +56,7 @@ async function main() {
   } else if (arg === "-z4") {
     await z4(); // node prvi/main.js -z4
   } else {
-    console.log("  -load - učitaj CSV u MongoDB");
-    console.log("  -z1   - zamijeni nedostajuće vrijednosti");
-    console.log("  -z2   - izračunaj statistiku");
-    console.log("  -z3   - izračunaj frekvencije");
-    console.log(
-      "  -z4   - kreiraj dva dokumenta (<=srednja i >srednja vrijednost)"
-    );
+    console.log("neispravan argument: " + arg);
   }
 }
 
