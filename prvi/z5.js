@@ -4,8 +4,8 @@ import { CATEGORICAL_COLUMNS } from "./main.js";
 const mongoUrl = "mongodb://localhost:27017";
 const dbName = "studentdb";
 const collectionName = "students";
-const freqCollection = "frekvencija_student-mat-G1-leq-10";
-const embCollection = "emb_student-mat-G1-leq-10";
+const freqCollection = "frekvencija_student-por";
+const embCollection = "emb_student-por";
 
 /**
  * 5.Osnovni  dokument  kopirati u novi te embedati vrijednosti

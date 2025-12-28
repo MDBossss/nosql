@@ -5,7 +5,7 @@ import { MongoClient } from "mongodb";
 const mongoUrl = "mongodb://localhost:27017";
 const dbName = "studentdb";
 const collectionName = "students";
-const csvPath = "./dataset/student-mat-G1-leq-10.csv";
+const csvPath = "./dataset/student-por.csv";
 
 // ucitava csv podatke u mongo db
 async function loadData() {
@@ -19,7 +19,7 @@ async function loadData() {
 
   const results = [];
   fs.createReadStream(csvPath)
-    .pipe(csv())
+    .pipe(csv({ separator: ";" }))
     .on("data", (row) => {
       results.push(row);
     })

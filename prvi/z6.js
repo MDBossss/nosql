@@ -4,8 +4,8 @@ import { CONTINUOUS_COLUMNS } from "./main.js";
 const mongoUrl = "mongodb://localhost:27017";
 const dbName = "studentdb";
 const collectionName = "students";
-const statsCollection = "statistika_student-mat-G1-leq-10";
-const embCollection = "emb2_student-mat-G1-leq-10";
+const statsCollection = "statistika_student-por";
+const embCollection = "emb2_student-por";
 
 /**
  *6.	Osnovni  dokument  kopirati u novi te embedati vrijednosti iz tablice 2

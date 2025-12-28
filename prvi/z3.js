@@ -4,7 +4,7 @@ import { CONTINUOUS_COLUMNS, CATEGORICAL_COLUMNS } from "./main.js";
 const mongoUrl = "mongodb://localhost:27017";
 const dbName = "studentdb";
 const collectionName = "students";
-const freqCollection = "frekvencija_student-mat-G1-leq-10";
+const freqCollection = "frekvencija_student-por";
 
 /**
  *3.	Za svaku kategoričku  vrijednost izračunati frekvencije pojavnosti

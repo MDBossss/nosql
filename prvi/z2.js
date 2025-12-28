@@ -4,7 +4,7 @@ import { CONTINUOUS_COLUMNS } from "./main.js";
 const mongoUrl = "mongodb://localhost:27017";
 const dbName = "studentdb";
 const collectionName = "students";
-const statsCollection = "statistika_student-mat-G1-leq-10";
+const statsCollection = "statistika_student-por";
 
 /**
  * 2.	Za svaku kontinuiranu vrijednost izračunati srednju vrijednost,

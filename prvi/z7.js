@@ -3,7 +3,7 @@ import { CONTINUOUS_COLUMNS } from "./main.js";
 
 const mongoUrl = "mongodb://localhost:27017";
 const dbName = "studentdb";
-const embCollection = "emb2_student-mat-G1-leq-10";
+const embCollection = "emb2_student-por";
 
 /**
 7.	Iz tablice emb2 izvući sve one srednje vrijednosti  iz 

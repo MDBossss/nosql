@@ -5,9 +5,9 @@ import { ObjectId } from "mongodb";
 const mongoUrl = "mongodb://localhost:27017";
 const dbName = "studentdb";
 const collectionName = "students";
-const statistika1Collection = "statistika1_student-mat-G1-leq-10";
-const statistika2Collection = "statistika2_student-mat-G1-leq-10";
-const statsCollection = "statistika_student-mat-G1-leq-10";
+const statistika1Collection = "statistika1_student-por";
+const statistika2Collection = "statistika2_student-por";
+const statsCollection = "statistika_student-por";
 
 /**
  * 4.	Iz osnovnog  dokumenta kreirati dva nova dokumenta sa kontinuiranim vrijednostima
