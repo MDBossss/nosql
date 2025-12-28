@@ -1,0 +1,16 @@
+okej, sada cu ti dati upute za ostatak zadataka. napisi potreban kod i kao sto je objasnjeno u uputama, na taj nacin zelim da objasnis svaku celiku sto radi i kako ta metodologija pridonosi analizi. pobrini se da se redosljed nastavlja na prethodne celije:
+
+Cilj ovog koraka je inicijalno "sondiranje" podataka kako bi se utvrdilo koji atributi uopće nisu upotrebljivi za analitiku zbog nedostatka varijacije ili očitih pogrešaka.
+• Upute za rad u Pythonu:
+    1. Identifikacija uniformnosti: Upotrijebite naredbu df.std() nad numeričkim podacima. Potražite varijable kod kojih je standardna devijacija 0 ili izrazito blizu 0, jer uniformne vrijednosti (npr. ako bi svi učenici bili iste dobi) ne pružaju nikakvu informacijsku vrijednost za modeliranje.
+    2. Provjera logičkih granica: Upotrijebite df.min() i df.max() te usporedite dobivene vrijednosti s dokumentacijom u izvoru student.txt. Primjerice, provjerite postoje li u varijabli age vrijednosti poput 100 ili u G1 vrijednosti veće od 20, što bi ukazivalo na nelogične podatke ili pogreške pri unosu.
+    3. Provjera popunjenosti: Izračunajte postotak nedostajućih vrijednosti po svakom atributu pomoću df.isnull().sum(). Prema izvorima, atributi s više od 20 % neispunjenih polja mogu ozbiljno ugroziti kvalitetu analize.
+• Očekivani rezultat: Popis varijabli koje treba eliminirati iz daljnje obrade jer su uniformne ili sadrže logički nemoguće vrijednosti koje bi mogle dovesti analitičara u zabludu.
+2. Određivanje, provjera i redizajn ciljne varijable
+Ovaj se korak fokusira na postavljanje "analitičke mete" sukladno vašem zadatku iz tablice image.png.
+• Upute za rad u Pythonu:
+    1. Određivanje (Kreiranje): Transformirajte numerički stupac G1 u novu binomnu (target) varijablu. Kreirajte stupac (npr. df['target_G1']) koji poprima vrijednost 1 ako je G1 < 10 (pad/rizik) i 0 ako je G1 >= 10 (prolaz).
+    2. Provjera kvalitete kroz frekvenciju: Upotrijebite df['target_G1'].value_counts() kako biste vidjeli distribuciju ishoda. Kvalitetna ciljna varijabla mora imati zastupljena oba stanja (Da/Ne) kako bi prediktivni model mogao "učiti" na razlikama između njih.
+    3. Vremensko usklađivanje: Provjerite jesu li svi vaši prediktori (npr. studytime, failures) prikupljeni prije trenutka ocjenjivanja G1, kako biste osigurali da model odražava stvarnu poslovnu/akademsku logiku uzroka i posljedice.
+    4. Redizajn (Spiralni pristup): Ako preliminarni pregled pokaže da je ciljna skupina preslaba (npr. nula učenika s ocjenom < 10), prema izvorima treba primijeniti spiralni pristup i ponovno definirati ili uzorak ili prag ciljne varijable (ako je to dopušteno ciljem analize).
+• Očekivani rezultat: Definirana i validirana binomna ciljna varijabla spreman za kasniju analizu relevantnosti, uz potvrdu da su oba ishoda ("rizik" i "nije rizik") dovoljno zastupljena u uzorku.
