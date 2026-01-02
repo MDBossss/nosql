@@ -1,29 +1,29 @@
 Varijabla;IV;Prediktivnost
-failures_binned;0.858;Jak utjecaj
+failures;0.8696;Jak utjecaj
 higher;0.5162;Jak utjecaj
 school;0.4156;Jak utjecaj
-Medu;0.2643;Jak utjecaj
-Dalc;0.194;Jak utjecaj
-age;0.1902;Jak utjecaj
+Medu;0.2648;Jak utjecaj
+age;0.236;Jak utjecaj
+studytime;0.2147;Jak utjecaj
+Dalc;0.2017;Jak utjecaj
 Mjob;0.1797;Jak utjecaj
+Fedu;0.16;Jak utjecaj
 reason;0.1543;Jak utjecaj
-Fedu;0.1499;Jak utjecaj
+traveltime;0.1311;Jak utjecaj
 address;0.1177;Jak utjecaj
 absences;0.1078;Jak utjecaj
-studytime;0.1053;Jak utjecaj
-Walc;0.0947;Slab utjecaj
+Walc;0.1072;Jak utjecaj
+famrel;0.0975;Slab utjecaj
 guardian;0.0933;Slab utjecaj
-freetime;0.0883;Slab utjecaj
+freetime;0.0932;Slab utjecaj
 Fjob;0.0818;Slab utjecaj
-traveltime;0.0809;Slab utjecaj
 internet;0.0778;Slab utjecaj
-famrel;0.0761;Slab utjecaj
 sex;0.0607;Slab utjecaj
+goout;0.0605;Slab utjecaj
 activities;0.0451;Slab utjecaj
-goout;0.0388;Slab utjecaj
 romantic;0.0225;Slab utjecaj
+health;0.0218;Slab utjecaj
 nursery;0.018;Vrlo slab utjecaj
-health;0.0169;Vrlo slab utjecaj
 schoolsup;0.0137;Vrlo slab utjecaj
 paid;0.0108;Vrlo slab utjecaj
 famsup;0.01;Vrlo slab utjecaj
