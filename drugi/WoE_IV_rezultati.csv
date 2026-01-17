@@ -1,31 +1,31 @@
 Varijabla;IV;Prediktivnost
-failures;0.8696;Jak utjecaj
-higher;0.5162;Jak utjecaj
-school;0.4156;Jak utjecaj
-Medu;0.2648;Jak utjecaj
-age;0.236;Jak utjecaj
-studytime;0.2147;Jak utjecaj
-Dalc;0.2017;Jak utjecaj
-Mjob;0.1797;Jak utjecaj
-Fedu;0.16;Jak utjecaj
-reason;0.1543;Jak utjecaj
-traveltime;0.1311;Jak utjecaj
-address;0.1177;Jak utjecaj
-absences;0.1078;Jak utjecaj
-Walc;0.1072;Jak utjecaj
-famrel;0.0975;Slab utjecaj
-guardian;0.0933;Slab utjecaj
-freetime;0.0932;Slab utjecaj
-Fjob;0.0818;Slab utjecaj
-internet;0.0778;Slab utjecaj
-sex;0.0607;Slab utjecaj
-goout;0.0605;Slab utjecaj
-activities;0.0451;Slab utjecaj
-romantic;0.0225;Slab utjecaj
-health;0.0218;Slab utjecaj
-nursery;0.018;Vrlo slab utjecaj
-schoolsup;0.0137;Vrlo slab utjecaj
-paid;0.0108;Vrlo slab utjecaj
-famsup;0.01;Vrlo slab utjecaj
-Pstatus;0.0017;Vrlo slab utjecaj
-famsize;0.0013;Vrlo slab utjecaj
+failures;0.8696;Super prediktivnost
+higher;0.5162;Super prediktivnost
+school;0.4156;Jaka prediktivnost
+Medu;0.2648;Srednja prediktivnost
+age;0.236;Srednja prediktivnost
+studytime;0.2147;Srednja prediktivnost
+Dalc;0.2017;Srednja prediktivnost
+Mjob;0.1797;Srednja prediktivnost
+Fedu;0.16;Srednja prediktivnost
+reason;0.1543;Srednja prediktivnost
+traveltime;0.1311;Srednja prediktivnost
+address;0.1177;Srednja prediktivnost
+absences;0.1078;Srednja prediktivnost
+Walc;0.1072;Srednja prediktivnost
+famrel;0.0975;Slaba prediktivnost
+guardian;0.0933;Slaba prediktivnost
+freetime;0.0932;Slaba prediktivnost
+Fjob;0.0818;Slaba prediktivnost
+internet;0.0778;Slaba prediktivnost
+sex;0.0607;Slaba prediktivnost
+goout;0.0605;Slaba prediktivnost
+activities;0.0451;Slaba prediktivnost
+romantic;0.0225;Slaba prediktivnost
+health;0.0218;Slaba prediktivnost
+nursery;0.018;Varijabla nije korisna
+schoolsup;0.0137;Varijabla nije korisna
+paid;0.0108;Varijabla nije korisna
+famsup;0.01;Varijabla nije korisna
+Pstatus;0.0017;Varijabla nije korisna
+famsize;0.0013;Varijabla nije korisna
