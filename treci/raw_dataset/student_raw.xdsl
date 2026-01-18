@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This network was created in GeNIe Academic, which can be used for academic teaching and research purposes only -->
+<smile version="1.0" id="student_raw" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="address">
+			<state id="R" />
+			<state id="U" />
+			<probabilities>0.3035439137134052 0.6964560862865948</probabilities>
+		</cpt>
+		<cpt id="school">
+			<state id="GP" />
+			<state id="MS" />
+			<parents>address</parents>
+			<probabilities>0.3959390862944162 0.6040609137055837 0.7632743362831859 0.2367256637168142</probabilities>
+		</cpt>
+		<cpt id="goout">
+			<state id="State1" />
+			<state id="State2" />
+			<state id="State3" />
+			<state id="State4" />
+			<state id="State5" />
+			<probabilities>0.07395993836671803 0.2234206471494607 0.3158705701078582 0.2172573189522342 0.1694915254237288</probabilities>
+		</cpt>
+		<cpt id="Walc">
+			<state id="State1" />
+			<state id="State2" />
+			<state id="State3" />
+			<state id="State4" />
+			<state id="State5" />
+			<parents>goout</parents>
+			<probabilities>0.6875 0.1458333333333333 0.08333333333333333 0.0625 0.02083333333333333 0.5172413793103449 0.2689655172413793 0.1448275862068966 0.04827586206896552 0.02068965517241379 0.3707317073170732 0.2975609756097561 0.2195121951219512 0.08780487804878048 0.02439024390243903 0.3049645390070922 0.1773049645390071 0.2127659574468085 0.2340425531914894 0.07092198581560283 0.1818181818181818 0.1636363636363636 0.1818181818181818 0.2363636363636364 0.2363636363636364</probabilities>
+		</cpt>
+		<cpt id="sex">
+			<state id="F" />
+			<state id="M" />
+			<parents>Walc</parents>
+			<probabilities>0.7125506072874495 0.2874493927125506 0.66 0.34 0.5916666666666667 0.4083333333333333 0.3448275862068966 0.6551724137931034 0.1555555555555556 0.8444444444444444</probabilities>
+		</cpt>
+		<cpt id="schoolsup">
+			<state id="no" />
+			<state id="yes" />
+			<probabilities>0.8952234206471494 0.1047765793528505</probabilities>
+		</cpt>
+		<cpt id="age">
+			<state id="s1_below_16" />
+			<state id="s2_16_17" />
+			<state id="s3_17_up" />
+			<parents>schoolsup</parents>
+			<probabilities>0.1514629948364888 0.2650602409638554 0.5834767641996558 0.3529411764705882 0.3382352941176471 0.3088235294117647</probabilities>
+		</cpt>
+		<cpt id="famsize">
+			<state id="GT3" />
+			<state id="LE3" />
+			<probabilities>0.7041602465331279 0.2958397534668721</probabilities>
+		</cpt>
+		<cpt id="Pstatus">
+			<state id="A" />
+			<state id="T" />
+			<parents>famsize</parents>
+			<probabilities>0.07221006564551422 0.9277899343544858 0.2447916666666667 0.7552083333333333</probabilities>
+		</cpt>
+		<cpt id="internet">
+			<state id="no" />
+			<state id="yes" />
+			<parents>school</parents>
+			<probabilities>0.1583924349881797 0.8416075650118203 0.3716814159292036 0.6283185840707964</probabilities>
+		</cpt>
+		<cpt id="Mjob">
+			<state id="at_home" />
+			<state id="health" />
+			<state id="other" />
+			<state id="services" />
+			<state id="teacher" />
+			<parents>internet</parents>
+			<probabilities>0.3841059602649007 0.03311258278145696 0.456953642384106 0.09933774834437085 0.02649006622516556 0.1546184738955823 0.08634538152610441 0.3795180722891566 0.2429718875502008 0.1365461847389558</probabilities>
+		</cpt>
+		<cpt id="Medu">
+			<state id="State0" />
+			<state id="State1" />
+			<state id="State2" />
+			<state id="State3" />
+			<state id="State4" />
+			<parents>Mjob</parents>
+			<probabilities>0.02222222222222222 0.4962962962962963 0.2962962962962963 0.1481481481481481 0.03703703703703703 0.004081632653061224 0.04489795918367347 0.1061224489795918 0.1061224489795918 0.7387755102040816 0.01162790697674419 0.2635658914728682 0.3682170542635659 0.2248062015503876 0.1317829457364341 0.00145985401459854 0.04525547445255475 0.3372262773722628 0.3883211678832117 0.2277372262773723 0.00273972602739726 0.00273972602739726 0.00273972602739726 0.04383561643835616 0.947945205479452</probabilities>
+		</cpt>
+		<cpt id="Fedu">
+			<state id="State0" />
+			<state id="State1" />
+			<state id="State2" />
+			<state id="State3" />
+			<state id="State4" />
+			<parents>Medu</parents>
+			<probabilities>0.1714285714285714 0.3142857142857143 0.4571428571428571 0.02857142857142857 0.02857142857142857 0.03496503496503497 0.6433566433566433 0.2517482517482518 0.05594405594405594 0.01398601398601399 0.00106951871657754 0.2791443850267379 0.5411764705882353 0.13475935828877 0.04385026737967914 0.001428571428571429 0.1442857142857143 0.3014285714285714 0.3871428571428572 0.1657142857142857 0.005714285714285714 0.04571428571428571 0.1542857142857143 0.2514285714285714 0.5428571428571428</probabilities>
+		</cpt>
+		<cpt id="Fjob">
+			<state id="at_home" />
+			<state id="health" />
+			<state id="other" />
+			<state id="services" />
+			<state id="teacher" />
+			<parents>Fedu</parents>
+			<probabilities>0.15 0.025 0.775 0.025 0.025 0.09257142857142857 0.001142857142857143 0.6468571428571429 0.2525714285714286 0.006857142857142857 0.07714285714285715 0.01523809523809524 0.6247619047619047 0.2819047619047619 0.0009523809523809525 0.04580152671755725 0.02290076335877863 0.5572519083969465 0.366412213740458 0.007633587786259542 0.0234375 0.1328125 0.34375 0.234375 0.265625</probabilities>
+		</cpt>
+		<cpt id="reason">
+			<state id="course" />
+			<state id="home" />
+			<state id="other" />
+			<state id="reputation" />
+			<parents>school</parents>
+			<probabilities>0.3947990543735225 0.2718676122931442 0.06382978723404255 0.2695035460992908 0.5221238938053098 0.1504424778761062 0.1991150442477876 0.1283185840707965</probabilities>
+		</cpt>
+		<cpt id="Dalc">
+			<state id="State1" />
+			<state id="State2" />
+			<state id="State3" />
+			<state id="State4" />
+			<state id="State5" />
+			<parents>Walc</parents>
+			<probabilities>0.9757085020242915 0.01214574898785425 0.004048582995951417 0.004048582995951417 0.004048582995951417 0.7533333333333334 0.2266666666666667 0.006666666666666667 0.006666666666666667 0.006666666666666667 0.5305785123966942 0.3570247933884297 0.07603305785123965 0.03471074380165289 0.001652892561983471 0.3204545454545454 0.3886363636363636 0.2295454545454545 0.05909090909090908 0.002272727272727273 0.1111111111111111 0.1555555555555556 0.2666666666666667 0.1333333333333333 0.3333333333333334</probabilities>
+		</cpt>
+		<cpt id="failures">
+			<state id="State0" />
+			<state id="State1" />
+			<state id="State2" />
+			<state id="State3" />
+			<parents>Dalc</parents>
+			<probabilities>0.8691796008869179 0.08647450110864745 0.02217294900221729 0.02217294900221729 0.8429752066115703 0.1239669421487603 0.02479338842975207 0.008264462809917356 0.7209302325581395 0.2093023255813953 0.04651162790697674 0.02325581395348837 0.625 0.3472222222222222 0.01388888888888889 0.01388888888888889 0.7647058823529411 0.05882352941176471 0.05882352941176471 0.1176470588235294</probabilities>
+		</cpt>
+		<cpt id="guardian">
+			<state id="father" />
+			<state id="mother" />
+			<state id="other" />
+			<parents>failures</parents>
+			<probabilities>0.2459016393442623 0.7176684881602914 0.03642987249544627 0.2285714285714286 0.5857142857142857 0.1857142857142857 0.0196078431372549 0.607843137254902 0.3725490196078431 0.1428571428571428 0.7142857142857142 0.1428571428571428</probabilities>
+		</cpt>
+		<cpt id="traveltime">
+			<state id="State1" />
+			<state id="State2" />
+			<state id="State3" />
+			<state id="State4" />
+			<parents>school</parents>
+			<probabilities>0.6690307328605201 0.2576832151300236 0.04728132387706856 0.02600472813238771 0.3672566371681416 0.4601769911504425 0.1504424778761062 0.02212389380530973</probabilities>
+		</cpt>
+		<cpt id="studytime">
+			<state id="State1" />
+			<state id="State2" />
+			<state id="State3" />
+			<state id="State4" />
+			<parents>sex</parents>
+			<probabilities>0.2323759791122715 0.5169712793733682 0.195822454308094 0.05483028720626632 0.4624060150375939 0.4022556390977443 0.08270676691729323 0.05263157894736842</probabilities>
+		</cpt>
+		<cpt id="famsup">
+			<state id="no" />
+			<state id="yes" />
+			<probabilities>0.386748844375963 0.613251155624037</probabilities>
+		</cpt>
+		<cpt id="paid">
+			<state id="no" />
+			<state id="yes" />
+			<parents>failures</parents>
+			<probabilities>0.9471766848816029 0.05282331511839709 0.9 0.09999999999999999 0.9375 0.0625 0.8571428571428571 0.1428571428571428</probabilities>
+		</cpt>
+		<cpt id="activities">
+			<state id="no" />
+			<state id="yes" />
+			<probabilities>0.514637904468413 0.4853620955315871</probabilities>
+		</cpt>
+		<cpt id="nursery">
+			<state id="no" />
+			<state id="yes" />
+			<probabilities>0.1972265023112481 0.8027734976887519</probabilities>
+		</cpt>
+		<cpt id="higher">
+			<state id="no" />
+			<state id="yes" />
+			<parents>failures</parents>
+			<probabilities>0.06557377049180328 0.9344262295081968 0.2857142857142857 0.7142857142857143 0.4375 0.5625 0.4285714285714285 0.5714285714285714</probabilities>
+		</cpt>
+		<cpt id="romantic">
+			<state id="no" />
+			<state id="yes" />
+			<probabilities>0.6317411402157165 0.3682588597842835</probabilities>
+		</cpt>
+		<cpt id="famrel">
+			<state id="State1" />
+			<state id="State2" />
+			<state id="State3" />
+			<state id="State4" />
+			<state id="State5" />
+			<probabilities>0.03389830508474576 0.04468412942989215 0.1556240369799692 0.4884437596302003 0.2773497688751926</probabilities>
+		</cpt>
+		<cpt id="freetime">
+			<state id="State1" />
+			<state id="State2" />
+			<state id="State3" />
+			<state id="State4" />
+			<state id="State5" />
+			<parents>goout</parents>
+			<probabilities>0.125 0.3541666666666666 0.3125 0.08333333333333333 0.125 0.1103448275862069 0.2413793103448276 0.4206896551724138 0.1655172413793103 0.06206896551724138 0.07804878048780488 0.1463414634146341 0.5024390243902439 0.248780487804878 0.02439024390243903 0.0425531914893617 0.09219858156028368 0.326241134751773 0.4468085106382979 0.09219858156028368 0.00909090909090909 0.1090909090909091 0.2363636363636364 0.3272727272727273 0.3181818181818182</probabilities>
+		</cpt>
+		<cpt id="health">
+			<state id="State1" />
+			<state id="State2" />
+			<state id="State3" />
+			<state id="State4" />
+			<state id="State5" />
+			<probabilities>0.1386748844375963 0.1201848998459168 0.1910631741140216 0.1664098613251156 0.3836671802773498</probabilities>
+		</cpt>
+		<cpt id="absences">
+			<state id="s1_below_0" />
+			<state id="s2_0_2" />
+			<state id="s3_2_4" />
+			<state id="s4_4_6" />
+			<state id="s5_6_up" />
+			<probabilities>0.0003076923076923077 0.3941538461538461 0.1803076923076923 0.1618461538461539 0.2633846153846154</probabilities>
+		</cpt>
+		<cpt id="target_G1">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>school failures higher</parents>
+			<probabilities>0.25 0.75 0.8111111111111111 0.1888888888888889 0.25 0.75 0.2380952380952381 0.7619047619047619 0.25 0.75 0.1666666666666667 0.8333333333333333 0.1 0.9 0.25 0.75 0.15 0.8500000000000001 0.5555555555555556 0.4444444444444445 0.03846153846153846 0.9615384615384616 0.103448275862069 0.896551724137931 0.125 0.875 0.125 0.875 0.1666666666666667 0.8333333333333333 0.1 0.9</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 5.0.5310.0 ACADEMIC" name="student_raw">
+			<node id="school">
+				<name>school</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1301 158 1373 206</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="sex">
+				<name>sex</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>761 262 833 310</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="age">
+				<name>age</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>157 197 229 245</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="address">
+				<name>address</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1103 150 1175 198</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="famsize">
+				<name>famsize</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>30 132 102 180</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Pstatus">
+				<name>Pstatus</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>154 131 226 179</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="Medu">
+				<name>Medu</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>753 123 825 171</position>
+				<barchart active="true" width="128" height="108" />
+			</node>
+			<node id="Fedu">
+				<name>Fedu</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>580 118 652 166</position>
+				<barchart active="true" width="128" height="108" />
+			</node>
+			<node id="Mjob">
+				<name>Mjob</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>933 60 1005 108</position>
+				<barchart active="true" width="128" height="108" />
+			</node>
+			<node id="Fjob">
+				<name>Fjob</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>409 123 481 171</position>
+				<barchart active="true" width="128" height="108" />
+			</node>
+			<node id="reason">
+				<name>reason</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1299 27 1371 75</position>
+				<barchart active="true" width="128" height="90" />
+			</node>
+			<node id="guardian">
+				<name>guardian</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1322 250 1394 298</position>
+				<barchart active="true" width="128" height="72" />
+			</node>
+			<node id="traveltime">
+				<name>traveltime</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1478 53 1550 101</position>
+				<barchart active="true" width="128" height="90" />
+			</node>
+			<node id="studytime">
+				<name>studytime</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1103 245 1175 293</position>
+				<barchart active="true" width="128" height="90" />
+			</node>
+			<node id="failures">
+				<name>failures</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1322 454 1394 502</position>
+				<barchart active="true" width="128" height="90" />
+			</node>
+			<node id="schoolsup">
+				<name>schoolsup</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>30 194 102 242</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="famsup">
+				<name>famsup</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>30 256 102 304</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="paid">
+				<name>paid</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1059 623 1131 671</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="activities">
+				<name>activities</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>30 318 102 366</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="nursery">
+				<name>nursery</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>30 380 102 428</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="higher">
+				<name>higher</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1326 763 1398 811</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="internet">
+				<name>internet</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1116 29 1188 77</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="romantic">
+				<name>romantic</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>30 442 102 490</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<node id="famrel">
+				<name>famrel</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>30 504 102 552</position>
+				<barchart active="true" width="128" height="108" />
+			</node>
+			<node id="freetime">
+				<name>freetime</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1067 764 1139 812</position>
+				<barchart active="true" width="128" height="108" />
+			</node>
+			<node id="goout">
+				<name>goout</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>778 733 850 781</position>
+				<barchart active="true" width="128" height="108" />
+			</node>
+			<node id="Dalc">
+				<name>Dalc</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1095 430 1167 478</position>
+				<barchart active="true" width="128" height="108" />
+			</node>
+			<node id="Walc">
+				<name>Walc</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>760 467 832 515</position>
+				<barchart active="true" width="128" height="108" />
+			</node>
+			<node id="health">
+				<name>health</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>30 628 102 676</position>
+				<barchart active="true" width="128" height="108" />
+			</node>
+			<node id="absences">
+				<name>absences</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>30 690 102 738</position>
+				<barchart active="true" width="128" height="108" />
+			</node>
+			<node id="target_G1">
+				<name>target_G1</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1531 430 1603 478</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+			<textbox>
+				<caption>Input file: student_raw.csv\nData rows: 649\nElapsed time: 2.375s\n\nLearning algorithm: Bayesian Search\nAlgorithm parameters:\nIterations: 20\nMax parent count: 8\nSample size: 50\nLink probability: 0.1\nPrior link probability: 0.001\nSeed: 0\nMax search time: 0\nBackground knowledge was provided:\n  forced arcs: 3\n  nodes assigned to tiers: 1\n\nBest score in iteration 16: -17945.2\nEM Log Likelihood: -17112.5</caption>
+				<font color="000000" name="Arial" size="8" />
+				<position>30 758 217 1024</position>
+			</textbox>
+		</genie>
+	</extensions>
+</smile>
