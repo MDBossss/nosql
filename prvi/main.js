@@ -47,6 +47,7 @@ export const CATEGORICAL_COLUMNS = [
   "romantic",
 ];
 
+// potrebno je prvo pokrenuti sa -load da se ucitaju podaci, zatim ostale zadatke
 async function main() {
   const arg = process.argv[2];
   if (arg === "-load") {

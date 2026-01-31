@@ -76,7 +76,7 @@ async function z4() {
               {
                 $inc: { count: 1 },
                 $push: { values: value },
-              }
+              },
             );
           } else {
             // vrijednost je > srednja vrijednost
@@ -85,7 +85,7 @@ async function z4() {
               {
                 $inc: { count: 1 },
                 $push: { values: value },
-              }
+              },
             );
           }
         }
