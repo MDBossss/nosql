@@ -1,0 +1,192 @@
+[{
+  "_id": {
+    "$oid": "697dc7bb1ee312e4d079c798"
+  },
+  "Variable": "age",
+  "statistics": {
+    "_id": null,
+    "mean": 16.7442218798151,
+    "stddev": 1.2171988049363602,
+    "count": 649
+  }
+},
+{
+  "_id": {
+    "$oid": "697dc7bb1ee312e4d079c799"
+  },
+  "Variable": "Medu",
+  "statistics": {
+    "_id": null,
+    "mean": 2.514637904468413,
+    "stddev": 1.13367758595062,
+    "count": 649
+  }
+},
+{
+  "_id": {
+    "$oid": "697dc7bb1ee312e4d079c79a"
+  },
+  "Variable": "Fedu",
+  "statistics": {
+    "_id": null,
+    "mean": 2.3066255778120186,
+    "stddev": 1.0990831800621577,
+    "count": 649
+  }
+},
+{
+  "_id": {
+    "$oid": "697dc7bb1ee312e4d079c79b"
+  },
+  "Variable": "traveltime",
+  "statistics": {
+    "_id": null,
+    "mean": 1.568567026194145,
+    "stddev": 0.7480830842743629,
+    "count": 649
+  }
+},
+{
+  "_id": {
+    "$oid": "697dc7bb1ee312e4d079c79c"
+  },
+  "Variable": "studytime",
+  "statistics": {
+    "_id": null,
+    "mean": 1.9306625577812018,
+    "stddev": 0.828870260803963,
+    "count": 649
+  }
+},
+{
+  "_id": {
+    "$oid": "697dc7bb1ee312e4d079c79d"
+  },
+  "Variable": "failures",
+  "statistics": {
+    "_id": null,
+    "mean": 0.2218798151001541,
+    "stddev": 0.5927779352091677,
+    "count": 649
+  }
+},
+{
+  "_id": {
+    "$oid": "697dc7bb1ee312e4d079c79e"
+  },
+  "Variable": "famrel",
+  "statistics": {
+    "_id": null,
+    "mean": 3.930662557781202,
+    "stddev": 0.9549803078828363,
+    "count": 649
+  }
+},
+{
+  "_id": {
+    "$oid": "697dc7bb1ee312e4d079c79f"
+  },
+  "Variable": "freetime",
+  "statistics": {
+    "_id": null,
+    "mean": 3.180277349768875,
+    "stddev": 1.0502824846198726,
+    "count": 649
+  }
+},
+{
+  "_id": {
+    "$oid": "697dc7bb1ee312e4d079c7a0"
+  },
+  "Variable": "goout",
+  "statistics": {
+    "_id": null,
+    "mean": 3.184899845916795,
+    "stddev": 1.1748599355852718,
+    "count": 649
+  }
+},
+{
+  "_id": {
+    "$oid": "697dc7bb1ee312e4d079c7a1"
+  },
+  "Variable": "Dalc",
+  "statistics": {
+    "_id": null,
+    "mean": 1.50231124807396,
+    "stddev": 0.9241216486267035,
+    "count": 649
+  }
+},
+{
+  "_id": {
+    "$oid": "697dc7bb1ee312e4d079c7a2"
+  },
+  "Variable": "Walc",
+  "statistics": {
+    "_id": null,
+    "mean": 2.280431432973806,
+    "stddev": 1.2833900835769605,
+    "count": 649
+  }
+},
+{
+  "_id": {
+    "$oid": "697dc7bb1ee312e4d079c7a3"
+  },
+  "Variable": "health",
+  "statistics": {
+    "_id": null,
+    "mean": 3.536209553158706,
+    "stddev": 1.445144399405179,
+    "count": 649
+  }
+},
+{
+  "_id": {
+    "$oid": "697dc7bb1ee312e4d079c7a4"
+  },
+  "Variable": "absences",
+  "statistics": {
+    "_id": null,
+    "mean": 3.6594761171032357,
+    "stddev": 4.637182115142576,
+    "count": 649
+  }
+},
+{
+  "_id": {
+    "$oid": "697dc7bb1ee312e4d079c7a5"
+  },
+  "Variable": "G1",
+  "statistics": {
+    "_id": null,
+    "mean": 11.399075500770415,
+    "stddev": 2.74314931685772,
+    "count": 649
+  }
+},
+{
+  "_id": {
+    "$oid": "697dc7bb1ee312e4d079c7a6"
+  },
+  "Variable": "G2",
+  "statistics": {
+    "_id": null,
+    "mean": 11.570107858243452,
+    "stddev": 2.9113930850382435,
+    "count": 649
+  }
+},
+{
+  "_id": {
+    "$oid": "697dc7bb1ee312e4d079c7a7"
+  },
+  "Variable": "G3",
+  "statistics": {
+    "_id": null,
+    "mean": 11.906009244992296,
+    "stddev": 3.2281663339626157,
+    "count": 649
+  }
+}]

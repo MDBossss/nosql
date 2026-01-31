@@ -1,0 +1,265 @@
+[{
+  "_id": {
+    "$oid": "697dc7be8a2b8d66fa07df55"
+  },
+  "Varijabla": "school",
+  "Pojavnost": [
+    {
+      "GP": 423
+    },
+    {
+      "MS": 226
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "697dc7be8a2b8d66fa07df56"
+  },
+  "Varijabla": "sex",
+  "Pojavnost": [
+    {
+      "F": 383
+    },
+    {
+      "M": 266
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "697dc7be8a2b8d66fa07df57"
+  },
+  "Varijabla": "address",
+  "Pojavnost": [
+    {
+      "U": 452
+    },
+    {
+      "R": 197
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "697dc7be8a2b8d66fa07df58"
+  },
+  "Varijabla": "famsize",
+  "Pojavnost": [
+    {
+      "GT3": 457
+    },
+    {
+      "LE3": 192
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "697dc7be8a2b8d66fa07df59"
+  },
+  "Varijabla": "Pstatus",
+  "Pojavnost": [
+    {
+      "A": 80
+    },
+    {
+      "T": 569
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "697dc7be8a2b8d66fa07df5a"
+  },
+  "Varijabla": "Mjob",
+  "Pojavnost": [
+    {
+      "at_home": 135
+    },
+    {
+      "health": 48
+    },
+    {
+      "other": 258
+    },
+    {
+      "services": 136
+    },
+    {
+      "teacher": 72
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "697dc7be8a2b8d66fa07df5b"
+  },
+  "Varijabla": "Fjob",
+  "Pojavnost": [
+    {
+      "teacher": 36
+    },
+    {
+      "other": 367
+    },
+    {
+      "services": 181
+    },
+    {
+      "health": 23
+    },
+    {
+      "at_home": 42
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "697dc7be8a2b8d66fa07df5c"
+  },
+  "Varijabla": "reason",
+  "Pojavnost": [
+    {
+      "course": 285
+    },
+    {
+      "other": 72
+    },
+    {
+      "home": 149
+    },
+    {
+      "reputation": 143
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "697dc7be8a2b8d66fa07df5d"
+  },
+  "Varijabla": "guardian",
+  "Pojavnost": [
+    {
+      "mother": 455
+    },
+    {
+      "father": 153
+    },
+    {
+      "other": 41
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "697dc7be8a2b8d66fa07df5e"
+  },
+  "Varijabla": "schoolsup",
+  "Pojavnost": [
+    {
+      "yes": 68
+    },
+    {
+      "no": 581
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "697dc7be8a2b8d66fa07df5f"
+  },
+  "Varijabla": "famsup",
+  "Pojavnost": [
+    {
+      "no": 251
+    },
+    {
+      "yes": 398
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "697dc7be8a2b8d66fa07df60"
+  },
+  "Varijabla": "paid",
+  "Pojavnost": [
+    {
+      "no": 610
+    },
+    {
+      "yes": 39
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "697dc7be8a2b8d66fa07df61"
+  },
+  "Varijabla": "activities",
+  "Pojavnost": [
+    {
+      "no": 334
+    },
+    {
+      "yes": 315
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "697dc7be8a2b8d66fa07df62"
+  },
+  "Varijabla": "nursery",
+  "Pojavnost": [
+    {
+      "yes": 521
+    },
+    {
+      "no": 128
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "697dc7be8a2b8d66fa07df63"
+  },
+  "Varijabla": "higher",
+  "Pojavnost": [
+    {
+      "yes": 580
+    },
+    {
+      "no": 69
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "697dc7be8a2b8d66fa07df64"
+  },
+  "Varijabla": "internet",
+  "Pojavnost": [
+    {
+      "no": 151
+    },
+    {
+      "yes": 498
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "697dc7be8a2b8d66fa07df65"
+  },
+  "Varijabla": "romantic",
+  "Pojavnost": [
+    {
+      "no": 410
+    },
+    {
+      "yes": 239
+    }
+  ]
+}]
